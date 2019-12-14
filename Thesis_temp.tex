@@ -3,23 +3,55 @@
 \usepackage{lipsum}
 
 \usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
 
-\pagestyle{fancy} 
+\pagestyle{fancy-stylename}{
 \fancyhf{} % clear header/footer settings
-%\fancyhead[LE,RO]{Static words}
-\fancyfoot[OR,EL]{\thepage}
+%\fancyhead[LE,RO]{static_words}
+\fancyhead[RO]{\leftmark}
+\fancyfoot[OR,EL]{\thepage}}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[OR,EL]{\thepage}}
+
+%\renewcommand{\headrulewidth}{0pt}
+%\rhead{\leftmark}
+\fancypagestyle{fancy-stylename}
+
+\usepackage{geometry}
+\geometry{inner=3.5cm,outer=3cm}
+\geometry{top=2.5cm}
+
+\usepackage{titlesec}
+%\titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+
+\usepackage{etoolbox}
+\makeatletter
+%\ patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}
+\patchcmd{\chaptermark}{.}{}{}{}
+\patchcmd{\chaptermark}{\thechapter}{}{}{}
+\makeatother
+
 
 \begin{document}
 
 \title{PhD Thesis title}
 \author{Author name}
 \maketitle
+\thispagestyle{empty}
 
 \tableofcontents
+\thispagestyle{empty}
 \newpage
-
+\thispagestyle{empty}
 \frontmatter
 %\pagenumbering{roma}
+
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \lipsum[1-5]
@@ -30,7 +62,7 @@
 
 \mainmatter
 %\pagenumbering{arabic}
-\chapter{1. Chapter One}
+\chapter{Title of Chapter One}
 \lipsum[1-5]
 
 \section{1.1 Title}
