@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.18)  14 DEC 2019 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.18)  14 DEC 2019 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -41,18 +41,6 @@ s
 \f@nch@O@olf=\skip50
 \f@nch@O@orf=\skip51
 )
-! Undefined control sequence.
-<argument> \undefinedpagestyle 
-                               
-l.8 \pagestyle{fancy-stylename}
-                               {
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
@@ -182,7 +170,14 @@ Chapter 1.
 [1
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10
+] [2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3] [4] [5] [6] [7] [8] [9] [10
 
 ]
 Chapter 2.
@@ -192,25 +187,24 @@ Chapter 2.
 Chapter 3.
 [15] [16] [17] (./Thesis_temp.aux) ) 
 Here is how much of TeX's memory you used:
- 1702 strings out of 492982
- 22292 string characters out of 6126899
- 189723 words of memory out of 5000000
- 5304 multiletter control sequences out of 15000+600000
- 10077 words of font info for 35 fonts, out of 8000000 for 9000
+ 1700 strings out of 492982
+ 22268 string characters out of 6126899
+ 189587 words of memory out of 5000000
+ 5303 multiletter control sequences out of 15000+600000
+ 9724 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 24i,10n,43p,791b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24i,10n,43p,791b,257s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Program Files (x86)/texlive/2017/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Program Files (x86)/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Program Files (x8
 6)/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Program
  Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr17.pfb><c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsl10.pfb>
-Output written on Thesis_temp.pdf (25 pages, 124865 bytes).
+mr17.pfb>
+Output written on Thesis_temp.pdf (25 pages, 114554 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
