@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {1.1.2}1.1.2 title}{4}
 \contentsline {subsubsection}{1.1.1.1 title won't show in the contents}{5}
 \contentsline {paragraph}{title won't show in the contents}{6}
-\contentsline {subparagraph}{title won't show in the contents}{6}
+\contentsline {subparagraph}{title won't show in the contents}{7}
 \contentsline {section}{\numberline {1.2}1.2 Title}{7}
 \contentsline {chapter}{\numberline {2}2. Chapter Two}{9}
 \contentsline {section}{\numberline {2.1}2.1 title}{10}
