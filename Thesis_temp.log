@@ -1,0 +1,135 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.18)  14 DEC 2019 14:13
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Thesis_temp.tex
+(./Thesis_temp.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count88
+)
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
+)
+
+LaTeX Warning: Unused global option(s):
+    [UTF8].
+
+(./Thesis_temp.aux)
+\openout1 = `Thesis_temp.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+ [1
+
+
+{c:/Program Files (x86)/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.m
+ap}] [2
+
+] (./Thesis_temp.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 4.
+)
+\tf@toc=\write3
+\openout3 = `Thesis_temp.toc'.
+
+ [3] [4
+
+] [1
+
+] [2] [3
+
+] [4]
+Chapter 1.
+
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+ [1
+
+
+]
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12
+
+]
+Chapter 2.
+
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+ [13]
+[14] [15] [16]
+Chapter 3.
+
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+ [17
+
+]
+[18] [19] [20] (./Thesis_temp.aux) ) 
+Here is how much of TeX's memory you used:
+ 585 strings out of 492982
+ 6861 string characters out of 6126899
+ 162021 words of memory out of 5000000
+ 4214 multiletter control sequences out of 15000+600000
+ 10023 words of font info for 35 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,10n,43p,134b,194s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/Program Files (x86)/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Program Files (x86)/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Program Files (x8
+6)/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Program
+ Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr17.pfb>
+Output written on Thesis_temp.pdf (28 pages, 118620 bytes).
+PDF statistics:
+ 114 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

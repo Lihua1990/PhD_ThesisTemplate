@@ -1,0 +1,81 @@
+\documentclass[a4paper, 11pt, UTF8, openright]{book}
+
+\usepackage{lipsum}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy} 
+\fancyhf{} % clear header/footer settings
+%\fancyhead[LE,RO]{Static words}
+\fancyfoot[OR,EL]{\thepage}
+
+\begin{document}
+
+\title{PhD Thesis title}
+\author{Author name}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\frontmatter
+%\pagenumbering{roma}
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\lipsum[1-5]
+
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\lipsum[1-5]
+
+\mainmatter
+%\pagenumbering{arabic}
+\chapter{1. Chapter One}
+\lipsum[1-5]
+
+\section{1.1 Title}
+\lipsum[1-10]
+
+\subsection{1.1.1 title}
+\lipsum[1-5]
+
+\subsection{1.1.2 title}
+\lipsum[1-5]
+
+\subsubsection{1.1.1.1 title won't show in the contents}
+\lipsum[1-5]
+
+\paragraph{title won't show in the contents}
+\lipsum[1-5]
+
+\subparagraph{title won't show in the contents}
+\lipsum[1-5]
+
+\section{1.2 Title}
+\lipsum[1-5]
+
+\chapter{2. Chapter Two}
+\lipsum[1-5]
+
+\section{2.1 title}
+\lipsum[1-5]
+
+\subsection{2.1.1 title}
+\lipsum[1-5]
+
+
+\chapter{3. Chapter Three}
+\lipsum[1-5]
+
+\section{3.1 title}
+\lipsum[1-5]
+
+\subsection{3.1.1 title}
+\lipsum[1-5]
+
+
+
+
+
+	
+\end{document}
