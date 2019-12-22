@@ -1,5 +1,6 @@
 \documentclass[a4paper, 14pt, UTF8, openright]{book}
 
+\usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
 \usepackage{geometry}
@@ -29,15 +30,16 @@
 \titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
 
 \usepackage{etoolbox}
+
 \makeatletter
-%\ patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
-\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}
+\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}\emph{}
 %\patchcmd{\chaptermark}{.}{}{}{}
 %\patchcmd{\chaptermark}{\thechapter}{}{}{}
 \makeatother
 
 %\usepackage{anyfontsize}
-\usepackage{newtxtext}
+%\usepackage{newtxtext}\textbf{}
 %\usepackage{mathpazo}
 
 \usepackage{chemformula}
@@ -45,9 +47,6 @@
 \usepackage[titles]{tocloft}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
 %\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % for sections
-
-\begin{document}
-
 %\title{\bfseries \fontsize{80}{100}\selectfont PhD Thesis title}
 %\title{\bfseries\sffamily PhD Thesis title}
 %\title{\bfseries\textsf PhD Thesis title}
@@ -55,9 +54,17 @@
 \author{Author name}
 %\date{\today}
 %\date{2019/12/15}
-\date{Dec. 20, 2019}
+\date{Dec. 21, 2019}
+
+
+\begin{document}
+
+
+\begin{titlepage}
 \maketitle
 \thispagestyle{empty}
+\end{titlepage}
+
 
 \tableofcontents
 \thispagestyle{empty}
