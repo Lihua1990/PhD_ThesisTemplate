@@ -1,5 +1,6 @@
 \documentclass[a4paper, 14pt, UTF8, openright]{book}
 
+\usepackage{newtxtext}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
@@ -30,12 +31,11 @@
 \titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
 
 \usepackage{etoolbox}
-
 \makeatletter
-\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
-\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}\emph{}
-%\patchcmd{\chaptermark}{.}{}{}{}
-%\patchcmd{\chaptermark}{\thechapter}{}{}{}
+%%\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}
+\patchcmd{\chaptermark}{.}{}{}{}
+\patchcmd{\chaptermark}{\thechapter}{}{}{}
 \makeatother
 
 %\usepackage{anyfontsize}
