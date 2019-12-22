@@ -1,0 +1,14 @@
+# ignore a log file
+*.log
+
+# ignore aux file
+*.aux
+
+# ignore a toc file
+*.toc
+
+# ignore synctex.gz file
+*.synctex.gz
+
+# ignore pdf file
+*.pdf

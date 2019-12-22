@@ -1,11 +1,11 @@
-\documentclass[a4paper, 14pt, UTF8, openright]{book}
+\documentclass[a4paper,14pt,UTF8,openright]{book}
 
 \usepackage{newtxtext}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
 \usepackage{geometry}
-\geometry{a4paper, inner=3.5cm, outer=3cm, top=2.5cm, bottom=2.54cm}
+\geometry{a4paper,inner=3.5cm,outer=3cm,top=2.5cm,bottom=2.54cm}
 
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
@@ -28,14 +28,16 @@
 %\titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
 %\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 
-\titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+%\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{}{0pt}{\Huge\thechapter.\;}{\Huge}
+
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\Huge\thechapter.\;}{0pt}{\Huge}
 
 \usepackage{etoolbox}
 \makeatletter
 %%\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
 \patchcmd{\chaptermark}{\@chapapp\ }{}{}{}
-\patchcmd{\chaptermark}{.}{}{}{}
-\patchcmd{\chaptermark}{\thechapter}{}{}{}
+%\patchcmd{\chaptermark}{.}{}{}{}
+%\patchcmd{\chaptermark}{\thechapter}{}{}{}
 \makeatother
 
 %\usepackage{anyfontsize}
