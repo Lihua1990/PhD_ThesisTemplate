@@ -12,3 +12,10 @@
 
 # ignore pdf file
 *.pdf
+
+
+# ignore .bib related files
+*.bib
+*.bbl
+*.blg
+*.out

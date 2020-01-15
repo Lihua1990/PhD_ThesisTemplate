@@ -58,6 +58,15 @@
 %\date{2019/12/15}
 \date{Dec. 21, 2019}
 
+\renewcommand{\baselinestretch}{1.5}
+%\setlength{\parskip}{1em}
+
+\usepackage{hyperref}
+\hypersetup{hidelinks} % or
+% \hypersetup{pdfborder={0 0 0}}
+
+%\renewcommand{\bibname}{}
+
 \begin{document}
 
 \begin{titlepage}
@@ -85,6 +94,12 @@
 	Right    & Here      & & 1024 & 996 \\
 	Chinese  & $\alpha$  & & $\beta$  & 996 \\
 \end{tabular}
+
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.~\cite{Weir04}
 
 \mainmatter
 %\pagenumbering{arabic}
@@ -148,7 +163,9 @@
 \chapter{Summary}
 \lipsum[1-5]
 
-\chapter{References}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{ref}{}
+\bibliographystyle{unsrt}
 
 \chapter*{Curriculum vitae}
 \addcontentsline{toc}{chapter}{Curriculum vitae}
