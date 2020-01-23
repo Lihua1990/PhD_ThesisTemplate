@@ -67,6 +67,10 @@
 
 %\renewcommand{\bibname}{}
 
+\usepackage{longtable}
+\usepackage{lscape}
+
+
 \begin{document}
 
 \begin{titlepage}
@@ -95,7 +99,56 @@
 	Chinese  & $\alpha$  & & $\beta$  & 996 \\
 \end{tabular}
 
+\begin{longtable}{p{0.35\textwidth}p{0.14\textwidth}||p{0.02\textwidth}p{0.35\textwidth}p{0.14\textwidth}}
+%\caption{A simple longtable example}\\
+%\hline
+%\textbf{First entry} & \textbf{Second entry} & \textbf{Third entry} & \textbf{Fourth entry} \\
+%\hline
+%\endfirsthead
+%\multicolumn{4}{c}%
+%{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+%\hline
+%\textbf{First entry} & \textbf{Second entry} & \textbf{Third entry} & \textbf{Fourth entry} \\
+%\hline
+%\endhead
+%\hline \multicolumn{4}{r}{\textit{Continued on next page}} \\
+%\endfoot
+%\hline
+%\endlastfoot
+Toll-like receptor & TLR &  &Toll-like receptor database & TollDB \\
+Right    & Here      && 1024 & 996 \\
+Chinese  & $\alpha$  && $\beta$  & 996 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2& & 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2& & 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2& & 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+1 & 2 & &3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\ 1 & 2 && 3 & 4 \\
+\end{longtable}	
 
+% An extra wide table 
+\begin{landscape}
+	After this point, everthing is displayed in landscape format.\\
+	\ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		Year & 2000 & 2001 & 2002 & 2003 & 2004 & 2005 & 2006 & 2007 & 2008 & 2009 & 2010 \\
+		\hline 
+		GPD in billions & 235  &  225 bn & 223 bn & 323 & 423  & 523 & 624 & 725 & 826  & 924  & 1022  \\
+		\hline 
+	\end{tabular}
+\end{landscape}
+After this point, everthing is displayed in portrait format.
+	
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
@@ -176,10 +229,28 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 \chapter*{Curriculum vitae}
 \addcontentsline{toc}{chapter}{Curriculum vitae}
 
-\noindent Personal data \\
+\noindent Personal data
+
 \noindent\rule{\textwidth}{0.4pt}
 
-\noindent Education \\
+\vskip 0.1in
+
+\begin{tabular}{p{0.4\textwidth}p{0.6\textwidth}}
+	Name: & San Zhang \\
+	Date of birth: & 09.09.1999 \\
+	Place of birth: & Beijing, China \\
+\end{tabular} \\
+
+\noindent Education
+
 \noindent\rule{\textwidth}{0.4pt}
+
+\vskip 0.1in
+
+\begin{tabular}{p{0.4\textwidth}p{0.60\textwidth}}
+	09/2018-06/2022 & Bachelor student, xxx University \\
+	09/2022-06/2025 & Master student, xxx University \\
+	09/2025-08/2029 & Ph.D student, xxx Berlin \\
+\end{tabular} \\
 
 \end{document}
