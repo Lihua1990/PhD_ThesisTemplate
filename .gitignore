@@ -1,5 +1,7 @@
 # ignore a log file
 *.log
+*.lof
+*.lot
 
 # ignore aux file
 *.aux
@@ -19,3 +21,7 @@
 *.blg
 *.out
 *.bak
+
+# other files to ignore
+*.fdb_latexmk
+*.fls
