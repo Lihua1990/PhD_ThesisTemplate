@@ -189,12 +189,7 @@ as you might think. The best way to control margins is to use the \textbf{geomet
 
 \textbf{Headers, Footers, and Page Numbering}: The output page consists of the \textit{head}, the \textit{body} and the \textit{foot}. Header and footer material, such as page numbers and/or section titles, appear in the head or the foot. All the classes (except \textbf{letter}) print at least the page number by default.
 
-If you don’t like the default action of the document class, you can determine what goes
-into the head and foot by using the \textbf{pagestyle} command. This command is often placed
-just after a \textbackslash chapter or a similar command. There are four standard page styles:
-\textbackslash pagestyle{plain}: The page number is in the foot and the head is empty. This is
-the default page style for the article and report document classes. \textbackslash pagestyle{empty}: The head and foot are both empty. \textbackslash pagestyle\{headings\}: The page number and current section heading (the level of the heading is determined by the document class) is put in the head; the foot is empty. This is the default for the book class.
-\textbackslash pagestyle\{myheadings\}: Similar to the headings page style, except you specify the information (other than the page number) that goes in the head by using the \textbf{markboth} and \textbf{markright} commands. markboth is used for two-sided documents, and markright is used for one-sided:
+If you don’t like the default action of the document class, you can determine what goes into the head and foot by using the \textbf{pagestyle} command. This command is often placed just after a \textbackslash chapter or a similar command. There are four standard page styles: \textbackslash pagestyle{plain}: The page number is in the foot and the head is empty. This is the default page style for the article and report document classes.  \textbackslash pagestyle{empty}: The head and foot are both empty. \textbackslash pagestyle\{headings\}: The page number and current section heading (the level of the heading is determined by the document class) is put in the head; the foot is empty. This is the default for the book class. \textbackslash pagestyle\{myheadings\}: Similar to the headings page style, except you specify the information (other than the page number) that goes in the head by using the \textbf{markboth} and \textbf{markright} commands. markboth is used for two-sided documents, and markright is used for one-sided:
 
 \textbackslash markboth\{leftheader\}\{rightheader\}
 
@@ -269,19 +264,15 @@ To use it, include the following commands in the preamble: \textbackslash usepac
 \end{longtable}
 \end{center}
 
-Since documents of any length are usually divided into sections, the classes article,
-report, and book have a set of commands which take the name of the section as an
-argument. The author uses these commands in the proper order, providing the section
-name, and LATEX takes care of formatting the headings (boldface, larger typesize, etc.)
-and numbering them appropriately. The sectioning commands are:
+For vertical spacing, use \textbf{\textbackslash smallskip}, \textbf{\textbackslash medskip}, \textbf{\textbackslash bigskip}, \textbf{\textbackslash vspace\{\}} or \textbf{\textbackslash vskip}. But note that the first three commands can only be used after a paragraph break (which is made by one completely blank line or by the command \textbackslash par). These commands output flexible or rubber space, approximately 3pt, 6pt, and 12pt high respectively, but these commands will automatically compress or expand a bit, depending on the demands of the rest of the page.
+
+Since documents of any length are usually divided into sections, the classes article, report, and book have a set of commands which take the name of the section as an argument. The author uses these commands in the proper order, providing the section name, and LATEX takes care of formatting the headings (boldface, larger typesize, etc.) and numbering them appropriately. The sectioning commands are:
 
 \textbf{\textbackslash part \textbackslash section \textbackslash paragraph
 \textbackslash chapter \textbackslash subsection \textbackslash subparagraph
 \textbackslash subsubsection}
 
-Note that the \textbackslash chapter command is not available in article class. The \textbackslash part heading is rarely used. In most document classes, headings made with
-the lowest level headings, \textbackslash paragraph and \textbackslash subparagraph, are not numbered by default.
-You can make less formal headings by using the sectioning commands with a star (*) appended to the command names listed above. In this case, the section headings will
+Note that the \textbackslash chapter command is not available in article class. The \textbackslash part heading is rarely used. In most document classes, headings made with the lowest level headings, \textbackslash paragraph and \textbackslash subparagraph are not numbered by default. You can make less formal headings by using the sectioning commands with a star (*) appended to the  command names listed above. In this case, the section headings will
 not show up in the table of contents and will not be numbered.
 
 % An extra wide table 
@@ -319,10 +310,7 @@ Sometimes you may want to change the style or size of text that is not a section
 \end{tabular}
 \end{center}
 
-The default document size is 10 points. Therefore \textbackslash normalsize means
-10 points for a document in which no size option has been included. This document
-is printed in 12 points, so in this case, \textbackslash normalsize is 12 points. (Note that when normalsize is 12 points, there is no difference between huge and Huge. They are both
-the largest size—25 points.)
+The default document size is 10 points. Therefore \textbackslash normalsize means 10 points for a document in which no size option has been included. This document is printed in 12 points, so in this case, \textbackslash normalsize is 12 points. (Note that when normalsize is 12 points, there is no difference between huge and Huge. They are both the largest size—25 points.)
 
 {\tiny tiny}
 
@@ -561,10 +549,8 @@ If you have several lines to be centered horizontally, the center environment is
 
 \subsection{1.1.1 title}
 
-The quote environment begins a new line and indents text from both sides. It
-is delimited with \textbackslash begin\{quote\} and \textbackslash end\{quote\}. Any special effects (such as changes to the type size or style) started within the quote environment
-are terminated by \textbackslash end\{quote\}.
-New paragraphs are block style: that is, no indent and a blank line as separation. This section is inside a quote environment. There is also a very similar environment called quotation. The only difference is that paragraphs in the quotation environment are indented with no blank line between.
+The quote environment begins a new line and indents text from both sides. It is delimited with \textbackslash begin\{quote\} and \textbackslash end\{quote\}. Any special effects (such as changes to the type size or style) started within the quote environment
+are terminated by \textbackslash end\{quote\}. New paragraphs are block style: that is, no indent and a blank line as separation. This section is inside a quote environment. There is also a very similar environment called quotation. The only difference is that paragraphs in the quotation environment are indented with no blank line between.
 
 %next time from here here here!!!!
 
@@ -637,9 +623,7 @@ To avoid having the space after the command disappear, do the following:
 
 \today\ is a good day. produces: April 16, 2007 is a good day.
 
-To prevent two words from being split at a line break, tie them together with the tilde
-character: for example Mr.~Smith will never appear with “Mr.” at the end of one line
-and “Smith” at the start of the next.
+To prevent two words from being split at a line break, tie them together with the tilde character: for example Mr.~Smith will never appear with “Mr.” at the end of one line and “Smith” at the start of the next.
 
 
 what you want to know is shown in Figure \ref{fig:29571453.jpg}.
