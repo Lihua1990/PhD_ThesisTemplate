@@ -1,11 +1,29 @@
-\documentclass[a4paper,11pt,UTF8,openright]{book}
+\documentclass[12pt,openright]{book}
 
 \usepackage{newtxtext}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+%\setsansfont{Arial}
+%\setmonofont{Gill Sans MT}
+
+%\usepackage{xeCJK}
+%\setCJKmainfont[BoldFont={Microsoft YaHei},ItalicFont={STKaiti}]{SimSun}
+%\setCJKsansfont[BoldFont={Microsoft YaHei},ItalicFont={STKaiti}]{STKaiti}
+%\setCJKmonofont[BoldFont={STZhongsong},ItalicFont={STZhongsong}]{STZhongsong}
+
+%\setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03}]{FZShuSong-Z01}
+%\setCJKsansfont[BoldFont={FZHei-B01},ItalicFont={FZHei-B01}]{FZHei-B01}
+%\setCJKmonofont[BoldFont={FZHei-B01},ItalicFont={FZHei-B01}]{FZFangSong-Z02}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\usepackage[14pt]{extsizes} % use this when fontsize is not 10, 11 or 12pt
 \usepackage{geometry}
-\geometry{a4paper,inner=3.5cm,outer=3cm,top=2.5cm,bottom=2.54cm}
+\geometry{a4paper,inner=3cm,outer=2.5cm,top=2.5cm,bottom=2.54cm}
 
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
@@ -78,11 +96,24 @@
 \usepackage[labelfont=bf]{caption}
 
 \graphicspath{ {figure/} }
+\usepackage{array}
 
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
 \usepackage{booktabs}
+
+%\usepackage{layout}
+%\usepackage{showframe}
+%\the\textwidth = 438.74153pt --> 6.09363236111 in, 1828.08970833 px for full textwidth 300 dpi pic
+%% resample the figure pixel to \textwidth in inches * 300 pixels wide
+% \usepackage{layout}
+% \usepackage{showframe}
+
+
 
 
 \begin{document}
+% \the\textwidth
 
 \begin{titlepage}
 \maketitle
