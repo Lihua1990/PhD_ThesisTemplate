@@ -25,3 +25,4 @@
 # other files to ignore
 *.fdb_latexmk
 *.fls
+*.db
