@@ -31,7 +31,7 @@
 \fancypagestyle{fancy-stylename}{
 \fancyhf{} % clear header/footer settings
 \fancyhead[LE,RO]{\textit{Guides and tutorials}}
-\fancyhead[RO]{\leftmark}
+\fancyhead[RO]{\itshape\nouppercase{\leftmark}}
 \fancyfoot[OR,EL]{\thepage}}
 
 \fancypagestyle{plain}{
@@ -51,13 +51,9 @@
 
 \titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\Huge\thechapter. \,}{0pt}{\Huge}
 
-\usepackage{etoolbox}
-\makeatletter
-%%\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
-\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}
-%\patchcmd{\chaptermark}{.}{}{}{}
-%\patchcmd{\chaptermark}{\thechapter}{}{}{}
-\makeatother
+% \usepackage{etoolbox}
+
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
 
 %\usepackage{anyfontsize}
 %\usepackage{newtxtext}\textbf{}
