@@ -41,9 +41,8 @@
 %\renewcommand{\headrulewidth}{0pt}
 %\renewcommand{\footrulewidth}{1pt}
 %\rhead{\leftmark}
-\pagestyle{fancy-stylename}
-
-\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+%\pagestyle{fancy-stylename}
+%\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
 
 \usepackage{titlesec}
 %\titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
@@ -119,12 +118,11 @@
 
 \begin{titlepage}
 \maketitle
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \end{titlepage}
 
-\pagestyle{empty}
+%\pagestyle{empty}
 \tableofcontents
-\clearpage
 \pagestyle{fancy-stylename}
 
 \frontmatter
