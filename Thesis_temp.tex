@@ -43,6 +43,8 @@
 %\rhead{\leftmark}
 \pagestyle{fancy-stylename}
 
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+
 \usepackage{titlesec}
 %\titleformat{\chapter}{\normalfont\huge\bfseries}{}{0pt}{\Huge}
 %\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
@@ -120,11 +122,10 @@
 \thispagestyle{empty}
 \end{titlepage}
 
+\pagestyle{empty}
 \tableofcontents
-\thispagestyle{empty}
-
-\newpage
-\thispagestyle{empty}
+\clearpage
+\pagestyle{fancy-stylename}
 
 \frontmatter
 %\pagenumbering{roma}  % Roman page number for toc
