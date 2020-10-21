@@ -72,11 +72,11 @@
 %\title{\bfseries \fontsize{80}{100}\selectfont PhD Thesis title}
 %\title{\bfseries\sffamily PhD Thesis title}
 %\title{\bfseries\textsf PhD Thesis title}
-\title{\Huge \bfseries \LaTeX\ Thesis template}
-\author{Author name}
-%\date{\today}
-%\date{2019/12/15}
-\date{Dec. 21, 2019}
+% \title{\Huge \bfseries \LaTeX\ Thesis template}
+% \author{Author name}
+% %\date{\today}
+% %\date{2019/12/15}
+% \date{Dec. 21, 2019}
 
 \renewcommand{\baselinestretch}{1.5}
 %\setlength{\parskip}{1em}
@@ -112,8 +112,43 @@
 % \the\textwidth
 
 \begin{titlepage}
-\maketitle
+%\maketitle
 %\thispagestyle{empty}
+\begin{center}
+  \vspace*{1cm}
+
+  \Huge \textbf {Thesis Title}
+
+  \vspace{0.5cm}
+
+  \Large{Thesis subtitle}
+
+  \vspace{2cm}
+
+  \large{Inaugural-Dissertation \\ to obtain the academic degree \\ Doctor rerum naturalium (Dr. rer. nat.)}
+
+  \vspace{1.5cm}
+
+  \large{submitted to the Department of xxxBCPxxx of \\ XXX University}
+
+  \vspace{1.5cm}
+
+  %\textbf{Author Name}
+
+  \vfill
+
+  \large{by \\ \textbf{San Zhang} \\ from Beijing, China}
+  
+  \vspace{0.5cm}
+
+  \large{2020}
+  
+  % A thesis presented for the degree of Doctor of Philosophy \\
+  % Department name \\
+  % University name \\
+  % Date
+
+\end{center}
 \end{titlepage}
 
 \pagestyle{empty}
@@ -134,9 +169,12 @@
 \addcontentsline{toc}{chapter}{List of Abbreviations}
 
 \begin{tabular}{p{0.3\textwidth}p{0.19\textwidth}||p{0.02\textwidth}p{0.3\textwidth}p{0.19\textwidth}}
-  Toll-like receptor & TLR & &Toll-like receptor database & TollDB \\
-  Right    & Here      & & 1024 & 996 \\
-  Chinese  & $\alpha$  & & $\beta$  & 996 \\
+  Commonly used characters &  & & Commonly used characters &   \\
+  \S & \textbackslash S & & \dag & \textbackslash dag \\
+  \ddag & \textbackslash ddag & & \P & \textbackslash P \\
+  \copyright & \textbackslash copyright & & \textregistered & \textbackslash textregistered \\
+  \texttrademark & \textbackslash texttrademark & & \pounds & \textbackslash pounds \\
+  \textbullet & \textbackslash textbullet & & \textbackslash & \textbackslash textbackslash   \\
 \end{tabular}
 
 \newpage
@@ -203,7 +241,7 @@ drawn with the command \textbackslash rule\{\textbackslash textwidth\}\{1pt\}.
 
 \rule{\textwidth}{1pt}
 
-The command \textbackslash footnote{footnote text} should be placed exactly where you want the footnote number to appear, with no extra space between the \textbackslash footnote command and the text before it. For example: 
+The command \textbackslash footnote\{footnote text\} should be placed exactly where you want the footnote number to appear, with no extra space between the \textbackslash footnote command and the text before it. For example: 
 
 This is text with a note.\footnote{This is the note text. Here it is at the bottom of the page.}
 
@@ -313,6 +351,17 @@ This example shows how to cite within the figure caption, see in Figure~\ref{fig
 	\label{fig:captioncitation}
 \end{figure}
 
+\begin{figure}[htp]
+  \centering
+  \begin{tabular}{ll}
+    A & B \\
+    \includegraphics[width=0.5\textwidth]{29571453}
+    & \includegraphics[width=0.5\textwidth]{29571453} \\
+  \end{tabular}
+  \caption[figure caption with citation.]{figure caption with } 
+	\label{fig:figurespanel_table}
+\end{figure}
+
 \subsubsection{1.1.1.1 title won't show in the contents}
 
 What if I also referenced the same reference here~\cite{ibge1993}, why?
@@ -356,9 +405,13 @@ Sometimes you may want to change the style or size of text that is not a section
   \textbackslash textsf\{\} & \textsf{sans serif} & Sans Serif family, used for posters, etc.\\	
   \textbackslash texttt\{\} & \texttt{typewriter} & Typewriter family, fixed-pitch characters\\
   \textbackslash emph\{\} & \emph{emphasized} & Use for emphasis, usually changes to italic\\
+  \textbackslash underline\{\} & \underline{underline} & Use for \underline{underline}\\
   \hline	
+  \multicolumn{3}{p{0.9\textwidth}}{Use \textbackslash usepackage\{ulem\}, then \textbackslash uline\{emphasized\}, or \textbackslash emph\{for long sentence in order to change lines automatically.\}}
 \end{tabular}
 \end{center}
+
+\dag\!\dag \, Here \textbackslash ! means negative distance. \dag\!\dag
 
 The default document size is 10 points. Therefore \textbackslash normalsize means 10 points for a document in which no size option has been included. This document is printed in 12 points, so in this case, \textbackslash normalsize is 12 points. (Note that when normalsize is 12 points, there is no difference between huge and Huge. They are both the largest size—25 points.)
 
@@ -572,6 +625,8 @@ If the above pagestyle commands don’t do what you want, there is a package cal
 
 For vertical spacing, use \textbf{\textbackslash smallskip}, \textbf{\textbackslash medskip}, \textbf{\textbackslash bigskip}, \textbf{\textbackslash vspace\{\}} or \textbf{\textbackslash vskip}. But note that the first three commands can only be used after a paragraph break (which is made by one completely blank line or by the command \textbackslash par). These commands output flexible or rubber space, approximately 3pt, 6pt, and 12pt high respectively, but these commands will automatically compress or expand a bit, depending on the demands of the rest of the page.
 
+Paragraph break can use \textbackslash par inside commands or environments. Use \textbackslash \textbackslash\ the current line will be as it is and start a new line, use \textbackslash linebreak to introduce a line break will make the current line aligns to the full textwidth and then start a new line.
+
 \section{3.1 title}
 
 Use \% to add your comments. Different text editor have different hotkeys for commenting.
@@ -693,9 +748,9 @@ what you want to know is shown in Figure \ref{fig:29571453.jpg}.
 \vskip 0.1in
 
 \begin{tabular}{p{0.4\textwidth}p{0.60\textwidth}}
-  09/2018-06/2022 & Bachelor student, xxx University \\
-  09/2022-06/2025 & Master student, xxx University \\
-  09/2025-08/2029 & Ph.D student, xxx University \\
+  09/2018-06/2022 & Bachelor, xxx University \\
+  09/2022-06/2025 & Master, xxx University \\
+  09/2025-08/2029 & Ph.D., xxx University \\
 \end{tabular} \\
 
 \end{document}
