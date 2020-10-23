@@ -3,6 +3,7 @@
 \usepackage{newtxtext}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
+\usepackage{lineno}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{fontspec}
@@ -714,6 +715,20 @@ what you want to know is shown in Figure \ref{fig:29571453.jpg}.
 
 \chapter*{Appendix}
 \addcontentsline{toc}{chapter}{Appendix}
+
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand\linenumberfont{\normalfont\small}
+\subsection{Appendix Subsection}
+
+\lipsum[1]
+
+\begin{linenumbers}
+  \lipsum[2]
+\end{linenumbers}
+
+\lipsum[1]
+
+\subsection*{Another appendix Subsection}
 
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{ref}{}
