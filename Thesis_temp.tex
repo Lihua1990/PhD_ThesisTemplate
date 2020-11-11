@@ -108,6 +108,21 @@
 % \usepackage{showframe}
 
 
+\usepackage{listings}
+\renewcommand{\ttdefault}{cmtt}
+\lstdefinestyle{estyle}{
+  basicstyle=\ttfamily \lst@ifdisplaystyle\small\fi
+}
+
+\lstset{language=[LaTeX]TeX,
+	   style=estyle,
+	   texcsstyle=*\color{orange},
+	   keywordstyle=\color{orange},
+	   lineskip={-1.5pt},
+	   morekeywords={frontmatter,mainmatter}
+}
+\usepackage[shortlabels,inline]{enumitem}
+\setlist{nolistsep}
 
 \begin{document}
 % \the\textwidth
@@ -169,7 +184,7 @@
 \chapter*{List of Abbreviations}
 \addcontentsline{toc}{chapter}{List of Abbreviations}
 
-\begin{tabular}{p{0.3\textwidth}p{0.19\textwidth}||p{0.02\textwidth}p{0.3\textwidth}p{0.19\textwidth}}
+\begin{tabular}{p{0.3\textwidth}p{0.18\textwidth}||p{0.02\textwidth}p{0.3\textwidth}p{0.18\textwidth}}
   Commonly used characters &  & & Commonly used characters &   \\
   \S & \textbackslash S & & \dag & \textbackslash dag \\
   \ddag & \textbackslash ddag & & \P & \textbackslash P \\
@@ -185,37 +200,32 @@
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.~\cite{Weir04}
 
-The command \textbackslash pagenumbering\{roman\} will set the page numbering to lowercase Roman numerals. Following command is used to set the layout of the page number.
+The command \lstinline|\pagenumbering{roman}| will set the page numbering to lowercase Roman numerals. Following command is used to set the layout of the page number.
 
-\textbf{\textbackslash pagenumbering\{num\_style\}}
+\lstinline|\pagenumbering{num_style}|
 
 Below, a list of styles available for page numbering:
+\begin{itemize}[label=\labelitemii]
+  \item arabic: arabic numerals
+  \item roman: lowercase roman numerals
+  \item Roman: uppercase roman numerals
+  \item alph: lowercase letters
+  \item Alph: uppercase letters
+\end{itemize}
 
-- arabic: arabic numerals
-
-- roman: lowercase roman numerals
-
-- Roman: uppercase roman numerals
-
-- alph: lowercase letters
-
-- Alph: uppercase letters
-
-In books, is customary to use Roman numerals for the pages before the first chapter/section, and Arabic numbers for the rest of the document. The commands that control the page numbering are: \textbf{\textbackslash frontmatter}, the pages after this command and before the command \textbf{\textbackslash mainmatter}, will be numbered with lowercase Roman numerals. \textbf{\textbackslash mainmatter}, this will restart the page counter and change the style to Arabic numbers.
+In books, is customary to use Roman numerals for the pages before the first chapter/section, and Arabic numbers for the rest of the document. The commands that control the page numbering are: \lstinline|\frontmatter|, the pages after this command and before the command \lstinline|\mainmatter|, will be numbered with lowercase Roman numerals. \lstinline|\mainmatter|, this will restart the page counter and change the style to Arabic numbers.
 
 The information displayed in the footer and the header of a document depends on the page style currently active, these page styles are more notorious in the \textbf{book} document class:
 
 The selectors that can be passed, inside brackets, to the commands \textbackslash fancyhead and \textbackslash fancyfoot are:
+\begin{itemize}
+  \item E: for even page
+  \item O: for odd page
+  \item L: for left side  
+  \item C: for centered
+  \item R: for right side
+\end{itemize}
 
-- E: for even page
-
-- O: for odd page
-
-- L: for left side
-
-- C: for centered
-
-- R: for right side
 
 \vskip 0.05in
 \rule{\textwidth}{0.5pt}
@@ -242,7 +252,7 @@ drawn with the command \textbackslash rule\{\textbackslash textwidth\}\{1pt\}.
 
 \rule{\textwidth}{1pt}
 
-The command \textbackslash footnote\{footnote text\} should be placed exactly where you want the footnote number to appear, with no extra space between the \textbackslash footnote command and the text before it. For example: 
+The command \lstinline|\footnote{footnote text}| should be placed exactly where you want the footnote number to appear, with no extra space between the \textbackslash footnote command and the text before it. For example: 
 
 This is text with a note.\footnote{This is the note text. Here it is at the bottom of the page.}
 
@@ -250,18 +260,21 @@ This is text with a note.\footnote{This is the note text. Here it is at the bott
 %\pagenumbering{arabic} % Start text with arabic 1
 \chapter{Title of Chapter One}
 
-\LaTeX\ input files have names end with the extension .tex. Normal \LaTeX\ document can be divided into two parts: the preamble and the document text. The part of your .tex file before the $\backslash$begin\{document\} command is called the preamble. In the preamble, you define the type of document you are writing and the language, load extra packages you will need, and set several parameters. 
-\vskip 0.2in
-$\backslash$documentclass[options]\{class\}
+\LaTeX{} input files have names end with the extension \lstinline{.tex}. Normal \LaTeX{} document can be divided into two parts: the preamble and the document text. The part of your .tex file before the \lstinline|\begin{document}| command is called the \textbf{preamble}. In the preamble, you can define the type of document you are writing and the language, load extra packages you will need, and set several parameters. 
 
-Preamble
+\begin{lstlisting}
+\documentclass[options]{class}
 
-\textbackslash begin\{document\}
+% preamble settings
+
+\begin{document}
 
 Document text
   
-\textbackslash end\{document\}
-\vskip 0.2in
+\end{document}
+\end{lstlisting}
+
+
 \textbf{Commands} produce text or space. For example, \textbackslash hspace\{2in\} and \textbackslash vspace\{2in\} are commands that create 2 inches of horizontal and vertical space, respectively, and \textbackslash textit\{\} will create \textit{some italic words} puts the contents of its argument in italic type. Many commands take arguments, either mandatory or optional; some commands, like \textbackslash today don’t.
 
 \textbf{Mandatory arguments} supply information required for a command to execute. For
@@ -314,16 +327,14 @@ extensions. For example, all documents need an AUX file. If the input file is na
 myfile.tex, the AUX file will be named myfile.aux. Other auxiliary files (see the list
 below) are needed only if you are producing a table of contents, etc. Auxiliary files are
 created automatically as they are needed.
-\vskip 0.1in
-- filename.aux : always needed
 
-- filename.toc : for table of contents
+\begin{itemize}[label=\labelitemii]
+\item filename.aux : always needed
+\item filename.toc : for table of contents
+\item filename.lot : for list of tables
+\item filename.lof : for list of figures
+\end{itemize}
 
-- filename.lot : for list of tables
-
-- filename.lof : for list of figures
-
-\vskip 0.1in
 If you have only one line to center, it’s easiest to use the plain TEX command
 \textbackslash centerline; for example,
 \textbackslash centerline{This line will be centered}.
@@ -388,7 +399,7 @@ What if I also referenced the same reference here~\cite{ibge1993}, why?
 \end{table}
   
 These classes provide preset formats with default margins paragraph formatting, and special commands suitable for producing specific sections. For example, the article, report, and book classes include a variety of commands to format section headings
-(\textbackslash part, \textbackslash chapter, \textbackslash section, \textbackslash subsection, \textbackslash subsubsection, etc.), as well as commands to produce a title page and a table of contents. There are minor differences between these three classes. The book class, for example, uses a smaller printed page size—about 5×7.5 inches—and is formatted for two-sided printing by default. The article class is intended for shorter works and does not have chapters (so articles can be easily included in reports or books). The \textbf{letter} class provides special commands to produce the salutation, address, and closing.
+(\lstinline|\part|, \lstinline|\chapter|, \lstinline|\section|, \lstinline|\subsection|, \lstinline|\subsubsection|, etc.), as well as commands to produce a title page and a table of contents. There are minor differences between these three classes. The book class, for example, uses a smaller printed page size—about 5×7.5 inches—and is formatted for two-sided printing by default. The article class is intended for shorter works and does not have chapters (so articles can be easily included in reports or books). The \textbf{letter} class provides special commands to produce the salutation, address, and closing.
 
 %\vskip 0.1in
 Sometimes you may want to change the style or size of text that is not a section heading. These commands can be combined, provided the font thus requested actually exists. For example, the command \textbackslash textbf\{\textbackslash textit\{This is bold italic\}\} produces: \textbf{\textit{This is bold italic}}.
@@ -495,7 +506,7 @@ not show up in the table of contents and will not be numbered.
     Math formula editing	& \url{https://www.codecogs.com/latex/eqneditor.php} \\
     Table generator	& \url{https://www.tablesgenerator.com/} \\
     WYSIWYG/text editor for editing Tikz code	& \url{http://www.tikzedt.org/} \\
-    Paper size, orientation and margins	& \url{https://www.overleaf.com/learn/latex/Page_size_and_margins} \\ 
+    Paper size, orientation and margins	& \href{https://www.overleaf.com/learn/latex/Page_size_and_margins}{https://www.overleaf.com/} \\ 
       \bottomrule
     \end{tabular}
 \end{table}
