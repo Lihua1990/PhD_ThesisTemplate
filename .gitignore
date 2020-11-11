@@ -13,7 +13,7 @@
 *.synctex.gz
 
 # ignore pdf file
-# *.pdf
+Thesis_temp.pdf
 
 
 # ignore .bib related files
